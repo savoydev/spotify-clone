@@ -19,7 +19,7 @@ const SongsPlaylistScreen = ({ route, navigation }) => {
   const [scrollY] = useState(new Animated.Value(0));
   const getScale = () => {
     return scrollY.interpolate({
-      inputRange: [10, 250],
+      inputRange: [10, 280],
       outputRange: [1, 0.5],
       extrapolate: "clamp",
       useNativeDriver: true,
@@ -27,28 +27,28 @@ const SongsPlaylistScreen = ({ route, navigation }) => {
   };
   const getOpacity = () => {
     return scrollY.interpolate({
-      inputRange: [10, 170],
+      inputRange: [10, 200],
       outputRange: [1, 0],
       extrapolate: "clamp",
     });
   };
   const getHeaderOpacity = () => {
     return scrollY.interpolate({
-      inputRange: [200, 260],
+      inputRange: [200, 290],
       outputRange: [0, 1],
       extrapolate: "clamp",
     });
   };
   const getTitleOpacity = () => {
     return scrollY.interpolate({
-      inputRange: [250, 280],
+      inputRange: [310, 330],
       outputRange: [0, 1],
       extrapolate: "clamp",
     });
   };
   const getTitleTranslateY = () => {
     return scrollY.interpolate({
-      inputRange: [250, 280],
+      inputRange: [310, 330],
       outputRange: [10, 0],
       extrapolate: "clamp",
     });
@@ -61,7 +61,7 @@ const SongsPlaylistScreen = ({ route, navigation }) => {
   const titleOpacity = getTitleOpacity();
   const titleTranslateY = getTitleTranslateY();
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       {/* <View
         style={[
           styles.bgContainer,
@@ -76,6 +76,7 @@ const SongsPlaylistScreen = ({ route, navigation }) => {
         style={[
           styles.playlistBackground,
           {
+            top: inset.top * 2,
             transform: [
               {
                 scale: scaleAnimate,
@@ -133,7 +134,7 @@ const SongsPlaylistScreen = ({ route, navigation }) => {
           size={24}
         />
       </TouchableWithoutFeedback>
-    </SafeAreaView>
+    </View>
   );
 };
 

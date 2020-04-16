@@ -22,7 +22,7 @@ export default SongPlaylistContainer;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 300,
+    paddingTop: 380,
     paddingHorizontal: 20,
   },
 });
