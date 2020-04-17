@@ -77,6 +77,7 @@ const SongsPlaylistScreen = ({ route, navigation }) => {
           styles.playlistBackground,
           {
             top: inset.top * 2,
+            paddingTop: inset.top * 2,
             transform: [
               {
                 scale: scaleAnimate,
@@ -168,7 +169,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     left: 0,
     right: 0,
-    paddingBottom: 10,
+    paddingBottom: 20,
   },
   hiddenTitle: {
     color: "#fff",

@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
-const SearchHeading = () => {
+const SearchHeading = (props) => {
   return (
     <View style={styles.container}>
       <Animated.Text style={[styles.heading]}>Search</Animated.Text>
@@ -26,7 +26,7 @@ const SearchHeading = () => {
             </Text>
           </View>
         </TouchableWithoutFeedback>
-        <TouchableWithoutFeedback>
+        <TouchableWithoutFeedback onPress={props.goToSeachInputScreen}>
           <Ionicons
             name="ios-mic"
             size={32}

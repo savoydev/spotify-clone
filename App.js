@@ -10,6 +10,9 @@ import LibraryScreen from "./screens/LibraryScreen";
 import SongsPlaylistScreen from "./screens/SongsPlaylistScreen";
 import PodcastsPlaylistScreen from "./screens/PodcastsPlaylistScreen";
 import SettingsScreen from "./screens/SettingsScreen";
+import SearchInputScreen from "./screens/SearchInputScreen";
+import { TransitionPresets } from "@react-navigation/stack";
+import { CardStyleInterpolators } from "@react-navigation/stack";
 
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
@@ -50,6 +53,13 @@ const SearchStack = createStackNavigator();
 const SearchStackNavigator = () => (
   <SearchStack.Navigator headerMode="none" initialRouteName="Search">
     <SearchStack.Screen name="Search" component={SearchScreen} />
+    <SearchStack.Screen
+      name="SearchInputScreen"
+      component={SearchInputScreen}
+      options={{
+        cardStyleInterpolator: CardStyleInterpolators.forVerticalIOS,
+      }}
+    />
   </SearchStack.Navigator>
 );
 

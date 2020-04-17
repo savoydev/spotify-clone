@@ -4,7 +4,7 @@ import { useSafeArea } from "react-native-safe-area-context";
 import SearchHeading from "../components/SearchHeading";
 import SearchCategoryGroup from "../components/SearchCategoryGroup";
 
-const SearchScreen = () => {
+const SearchScreen = ({ navigation }) => {
   const [scrollY] = useState(new Animated.Value(0));
   const insets = useSafeArea();
 
@@ -29,7 +29,11 @@ const SearchScreen = () => {
             marginBottom: 20,
           }}
         >
-          <SearchHeading />
+          <SearchHeading
+            goToSeachInputScreen={() =>
+              navigation.navigate("SearchInputScreen")
+            }
+          />
         </View>
         <View style={[styles.container]}>
           <SearchCategoryGroup />
