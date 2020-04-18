@@ -87,6 +87,7 @@ const SongsPlaylistScreen = ({ route, navigation }) => {
           },
         ]}
       ></Animated.View>
+
       <Animated.ScrollView
         scrollEventThrottle={16}
         onScroll={Animated.event([
@@ -121,6 +122,14 @@ const SongsPlaylistScreen = ({ route, navigation }) => {
         >
           Please Excuse Me For Being Antisocial
         </Animated.Text>
+        <View style={styles.playCircle}>
+          <Ionicons
+            style={styles.playIcon}
+            name="ios-play"
+            size={22}
+            color="white"
+          />
+        </View>
       </Animated.View>
       <TouchableWithoutFeedback onPress={goBackAPage}>
         <Ionicons
@@ -170,6 +179,8 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     paddingBottom: 20,
+    borderWidth: 1,
+    borderColor: "red",
   },
   hiddenTitle: {
     color: "#fff",
@@ -181,5 +192,21 @@ const styles = StyleSheet.create({
     position: "absolute",
     left: 20,
     top: 0,
+  },
+  playCircle: {
+    justifyContent: "center",
+    alignItems: "center",
+    height: 50,
+    width: 50,
+    borderRadius: 50,
+    backgroundColor: "green",
+    alignSelf: "flex-end",
+    position: "absolute",
+    right: 20,
+    bottom: -25,
+  },
+  playIcon: {
+    top: 1,
+    left: 2,
   },
 });

@@ -13,6 +13,7 @@ import SettingsScreen from "./screens/SettingsScreen";
 import SearchInputScreen from "./screens/SearchInputScreen";
 import { TransitionPresets } from "@react-navigation/stack";
 import { CardStyleInterpolators } from "@react-navigation/stack";
+import { TransitionSpecs } from "@react-navigation/stack";
 
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
@@ -57,6 +58,8 @@ const SearchStackNavigator = () => (
       name="SearchInputScreen"
       component={SearchInputScreen}
       options={{
+        gestureEnabled: true,
+        gestureDirection: "vertical",
         cardStyleInterpolator: CardStyleInterpolators.forVerticalIOS,
       }}
     />
