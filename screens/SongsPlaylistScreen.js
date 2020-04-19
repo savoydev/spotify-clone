@@ -179,8 +179,6 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     paddingBottom: 20,
-    borderWidth: 1,
-    borderColor: "red",
   },
   hiddenTitle: {
     color: "#fff",

@@ -27,6 +27,9 @@ const SearchInputScreen = () => {
       <Text style={styles.header}>
         Try saying an artist, song or playlist name.
       </Text>
+      <View style={styles.microphone}>
+        <Ionicons name="ios-mic" size={96} color="white" />
+      </View>
     </View>
   );
 };
@@ -47,5 +50,11 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     paddingHorizontal: 20,
     paddingTop: 110,
+    flex: 1,
+  },
+  microphone: {
+    flex: 5,
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
